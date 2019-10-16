@@ -19,7 +19,8 @@ app.use(session({
     secret: SESSION_SECRET, 
 }))
 
-app.post('/auth/register', authCtrl.register)
+app.post('/auth/register', authCtrl.register);
+app.post('/auth/login', authCtrl.login);
 
 const port = SERVER_PORT;
 app.listen(port, () => console.log(`Server running on port ${port}`));
